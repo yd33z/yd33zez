@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Tenses & Conditionals — B2 Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #0c0c0f;
+  --bg2:       #13131a;
+  --bg3:       #1a1a24;
+  --bg4:       #22222f;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.13);
+  --text:      #e8e8f0;
+  --muted:     #7a7a9a;
+  --mono:      'Space Mono', monospace;
+  --sans:      'Syne', sans-serif;
+
+  --teal:      #00d4a0;
+  --teal-dim:  #003d2e;
+  --teal-mid:  #00a07a;
+  --teal-glow: rgba(0,212,160,0.15);
+
+  --purple:    #9d7fff;
+  --purple-dim:#1e1535;
+  --purple-mid:#6d4fdd;
+  --purple-glow:rgba(157,127,255,0.15);
+
+  --blue:      #4da6ff;
+  --blue-dim:  #0d2040;
+  --blue-mid:  #2080e0;
+  --blue-glow: rgba(77,166,255,0.15);
+
+  --amber:     #ffb740;
+  --amber-dim: #2a1e00;
+  --amber-mid: #cc8800;
+  --amber-glow:rgba(255,183,64,0.15);
+
+  --coral:     #ff6b6b;
+  --coral-dim: #2a0e0e;
+  --coral-mid: #cc3333;
+  --coral-glow:rgba(255,107,107,0.15);
+
+  --green:     #4cdd88;
+  --red:       #ff5555;
+  --warn:      #ffb740;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── TOP HERO ─────────────────────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 56px 24px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(77,166,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 30%, #9d7fff 70%, #4da6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.tab-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid var(--border2);
+  background: var(--bg2);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: var(--text); border-color: var(--border2); background: var(--bg3); }
+.tab-btn.active { color: #000; border-color: transparent; font-weight: 700; }
+.tab-btn[data-tab="simple"].active    { background: var(--teal); }
+.tab-btn[data-tab="continuous"].active{ background: var(--purple); }
+.tab-btn[data-tab="perfect"].active   { background: var(--blue); }
+.tab-btn[data-tab="perf-cont"].active { background: var(--amber); }
+.tab-btn[data-tab="cond"].active      { background: var(--coral); }
+
+/* ── PAGES ────────────────────────────────────────────── */
+.page { display: none; padding: 0 16px 60px; max-width: 1200px; margin: 0 auto; }
+.page.active { display: block; }
+
+/* ── SECTION HEADER ───────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.section-number {
+  font-family: var(--mono);
+  font-size: 36px;
+  font-weight: 700;
+  opacity: 0.25;
+  line-height: 1;
+}
+.section-info h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.section-info p {
+  font-size: 12px;
+  font-family: var(--mono);
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+/* ── INTRO BAR ────────────────────────────────────────── */
+.intro-bar {
+  padding: 14px 28px;
+  font-size: 13px;
+  line-height: 1.65;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+/* ── WARNING BANNER ───────────────────────────────────── */
+.warn-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 28px;
+  background: rgba(255,183,64,0.08);
+  border-left: 1px solid var(--amber);
+  border-right: 1px solid var(--amber);
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--amber);
+}
+.warn-banner .wi { font-size: 16px; flex-shrink: 0; }
+
+/* ── TENSE GRID ───────────────────────────────────────── */
+.tense-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+.tense-card {
+  padding: 22px 20px;
+  border-right: 1px solid var(--border);
+  background: var(--bg2);
+}
+.tense-card:last-child { border-right: none; }
+
+/* ── CARD HEADER ──────────────────────────────────────── */
+.card-head {
+  margin-bottom: 16px;
+}
+.card-head h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+.card-subtitle {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* ── REALITY BADGE (conditionals) ─────────────────────── */
+.reality-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+/* ── TIMELINE ─────────────────────────────────────────── */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 16px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+.tl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  text-align: center;
+}
+.tl-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  border: 1px solid;
+  border-color: var(--border2);
+  position: relative;
+  z-index: 1;
+}
+.tl-dot.active {
+  width: 12px; height: 12px;
+  background: currentColor;
+  border-color: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+.tl-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border2);
+  margin-top: -4px;
+}
+.tl-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.tl-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.tl-label { flex: 1; text-align: center; color: var(--muted); font-size: 9px; }
+.tl-label.active { font-weight: 700; }
+
+/* ── FORMULA BOX ──────────────────────────────────────── */
+.formula-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.formula {
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.formula .flabel {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* ── NO PASSIVE ───────────────────────────────────────── */
+.no-passive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 11px;
+  font-family: var(--mono);
+  font-weight: 700;
+  background: rgba(255,183,64,0.06);
+  border: 1px solid rgba(255,183,64,0.25);
+  color: var(--amber);
+  letter-spacing: 0.5px;
+}
+
+/* ── USES PILLS ───────────────────────────────────────── */
+.section-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.pill {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+/* ── TIME WORDS ───────────────────────────────────────── */
+.timewords-box {
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+}
+.timewords-box .tw-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.timewords-box p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-family: var(--mono);
+}
+
+/* ── EXAMPLES ─────────────────────────────────────────── */
+.examples { margin-bottom: 14px; }
+.ex {
+  font-size: 12px;
+  padding: 7px 11px 7px 14px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  border-left: 2px solid;
+  font-style: italic;
+  line-height: 1.5;
+  background: var(--bg3);
+}
+
+/* ── TIP / ERROR BOXES ────────────────────────────────── */
+.tip-box, .err-box {
+  display: flex;
+  gap: 9px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 11.5px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  border: 1px solid;
+}
+.tip-box .icon, .err-box .icon {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-family: var(--mono);
+}
+.tip-box { background: var(--bg3); border-color: var(--border2); }
+.err-box { background: rgba(255,85,85,0.05); border-color: rgba(255,85,85,0.2); color: #ff8888; }
+.err-box .icon { background: rgba(255,85,85,0.15); color: #ff5555; }
+
+/* ── GOLDEN RULE BANNER ───────────────────────────────── */
+.golden-rule {
+  margin-top: 20px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,183,64,0.08), rgba(255,107,107,0.06));
+  border: 1px solid rgba(255,183,64,0.3);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.golden-rule .star { font-size: 22px; flex-shrink: 0; }
+.golden-rule strong { color: var(--amber); }
+
+/* ── COMPARISON TABLE ─────────────────────────────────── */
+.cmp-wrap {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+}
+.cmp-wrap table {
+  width: 100%; border-collapse: collapse; font-size: 12px;
+}
+.cmp-wrap thead th {
+  padding: 10px 14px;
+  background: var(--bg3);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  border-bottom: 1px solid var(--border2);
+}
+.cmp-wrap tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  background: var(--bg2);
+}
+.cmp-wrap tbody tr:last-child td { border-bottom: none; }
+.cmp-wrap .type-cell { font-weight: 700; font-family: var(--mono); }
+
+/* ── TEAL theme ─── */
+.t-teal .section-header { background: var(--teal-glow); border-color: rgba(0,212,160,0.3); }
+.t-teal .section-info h2 { color: var(--teal); }
+.t-teal .intro-bar { background: rgba(0,212,160,0.04); border-color: rgba(0,212,160,0.15); color: #a0f0dc; }
+.t-teal .tense-grid { border-color: rgba(0,212,160,0.2); }
+.t-teal .card-head h3 { color: var(--teal); }
+.t-teal .tl-dot.active { color: var(--teal); }
+.t-teal .tl-label.active { color: var(--teal); }
+.t-teal .formula.act { background: rgba(0,212,160,0.07); border: 1px solid rgba(0,212,160,0.2); color: #a0f0dc; }
+.t-teal .formula.pas { background: rgba(0,160,122,0.1); border: 1px solid rgba(0,212,160,0.15); color: #80e0c4; }
+.t-teal .pill { background: rgba(0,212,160,0.08); border-color: rgba(0,212,160,0.25); color: var(--teal); }
+.t-teal .ex.act { border-color: var(--teal); color: #c0f8ec; }
+.t-teal .ex.pas { border-color: var(--teal-mid); color: #90dfc8; }
+.t-teal .tip-box .icon { background: rgba(0,212,160,0.15); color: var(--teal); }
+.t-teal .tab-color { color: var(--teal); }
+
+/* ── PURPLE theme ─── */
+.t-purple .section-header { background: var(--purple-glow); border-color: rgba(157,127,255,0.3); }
+.t-purple .section-info h2 { color: var(--purple); }
+.t-purple .intro-bar { background: rgba(157,127,255,0.04); border-color: rgba(157,127,255,0.15); color: #c8b8ff; }
+.t-purple .tense-grid { border-color: rgba(157,127,255,0.2); }
+.t-purple .card-head h3 { color: var(--purple); }
+.t-purple .tl-dot.active { color: var(--purple); }
+.t-purple .tl-label.active { color: var(--purple); }
+.t-purple .formula.act { background: rgba(157,127,255,0.07); border: 1px solid rgba(157,127,255,0.2); color: #c8b8ff; }
+.t-purple .formula.pas { background: rgba(109,79,221,0.1); border: 1px solid rgba(157,127,255,0.15); color: #b0a0f0; }
+.t-purple .pill { background: rgba(157,127,255,0.08); border-color: rgba(157,127,255,0.25); color: var(--purple); }
+.t-purple .ex.act { border-color: var(--purple); color: #d8ccff; }
+.t-purple .ex.pas { border-color: var(--purple-mid); color: #b8a8f0; }
+.t-purple .tip-box .icon { background: rgba(157,127,255,0.15); color: var(--purple); }
+
+/* ── BLUE theme ─── */
+.t-blue .section-header { background: var(--blue-glow); border-color: rgba(77,166,255,0.3); }
+.t-blue .section-info h2 { color: var(--blue); }
+.t-blue .intro-bar { background: rgba(77,166,255,0.04); border-color: rgba(77,166,255,0.15); color: #a8d4ff; }
+.t-blue .tense-grid { border-color: rgba(77,166,255,0.2); }
+.t-blue .card-head h3 { color: var(--blue); }
+.t-blue .tl-dot.active { color: var(--blue); }
+.t-blue .tl-label.active { color: var(--blue); }
+.t-blue .formula.act { background: rgba(77,166,255,0.07); border: 1px solid rgba(77,166,255,0.2); color: #a8d4ff; }
+.t-blue .formula.pas { background: rgba(32,128,224,0.1); border: 1px solid rgba(77,166,255,0.15); color: #88c4ff; }
+.t-blue .pill { background: rgba(77,166,255,0.08); border-color: rgba(77,166,255,0.25); color: var(--blue); }
+.t-blue .ex.act { border-color: var(--blue); color: #c0deff; }
+.t-blue .ex.pas { border-color: var(--blue-mid); color: #90c8f8; }
+.t-blue .tip-box .icon { background: rgba(77,166,255,0.15); color: var(--blue); }
+
+/* ── AMBER theme ─── */
+.t-amber .section-header { background: var(--amber-glow); border-color: rgba(255,183,64,0.3); }
+.t-amber .section-info h2 { color: var(--amber); }
+.t-amber .intro-bar { background: rgba(255,183,64,0.04); border-color: rgba(255,183,64,0.15); color: #ffd490; }
+.t-amber .tense-grid { border-color: rgba(255,183,64,0.2); }
+.t-amber .card-head h3 { color: var(--amber); }
+.t-amber .tl-dot.active { color: var(--amber); }
+.t-amber .tl-label.active { color: var(--amber); }
+.t-amber .formula.act { background: rgba(255,183,64,0.07); border: 1px solid rgba(255,183,64,0.2); color: #ffd490; }
+.t-amber .pill { background: rgba(255,183,64,0.08); border-color: rgba(255,183,64,0.25); color: var(--amber); }
+.t-amber .ex.act { border-color: var(--amber); color: #ffe0a0; }
+.t-amber .tip-box .icon { background: rgba(255,183,64,0.15); color: var(--amber); }
+
+/* ── CORAL theme ─── */
+.t-coral .section-header { background: var(--coral-glow); border-color: rgba(255,107,107,0.3); }
+.t-coral .section-info h2 { color: var(--coral); }
+.t-coral .intro-bar { background: rgba(255,107,107,0.04); border-color: rgba(255,107,107,0.15); color: #ffb0b0; }
+.t-coral .tense-grid { border-color: rgba(255,107,107,0.2); }
+.t-coral .card-head h3 { color: var(--coral); }
+.t-coral .tl-dot.active { color: var(--coral); }
+.t-coral .tl-label.active { color: var(--coral); }
+.t-coral .formula.act { background: rgba(255,107,107,0.07); border: 1px solid rgba(255,107,107,0.2); color: #ffb0b0; }
+.t-coral .formula.pas { background: rgba(204,51,51,0.1); border: 1px solid rgba(255,107,107,0.15); color: #ff9090; }
+.t-coral .pill { background: rgba(255,107,107,0.08); border-color: rgba(255,107,107,0.25); color: var(--coral); }
+.t-coral .ex.act { border-color: var(--coral); color: #ffc8c8; }
+.t-coral .ex.pas { border-color: var(--coral-mid); color: #ffa0a0; }
+.t-coral .tip-box .icon { background: rgba(255,107,107,0.15); color: var(--coral); }
+
+@media (max-width: 768px) {
+  .tense-grid { grid-template-columns: 1fr; }
+  .tense-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .tense-card:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">B2 English Grammar Reference</div>
+  <h1>English Tenses<br>&amp; Conditionals</h1>
+  <p>Active &amp; Passive Voice · Complete guide covering all 12 tenses plus conditional structures, with formulas, examples, and common error warnings.</p>
+  <div class="nav-tabs">
+    <button class="tab-btn active" data-tab="simple">Simple</button>
+    <button class="tab-btn" data-tab="continuous">Continuous</button>
+    <button class="tab-btn" data-tab="perfect">Perfect</button>
+    <button class="tab-btn" data-tab="perf-cont">Perfect Continuous</button>
+    <button class="tab-btn" data-tab="cond">Conditionals</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 1: SIMPLE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page t-teal active" id="page-simple">
+  <div class="section-header">
+    <div class="section-number">01</div>
+    <div class="section-info">
+      <h2>Simple Tenses</h2>
+      <p>Present · Past · Future &nbsp;|&nbsp; Active &amp; Passive Voice</p>
+    </div>
+  </div>
+  <div class="intro-bar">
+    Simple tenses express actions as complete facts — habits, routines, completed events, and future predictions. No emphasis on duration or connection between events. The most common tenses in everyday English.
+  </div>
+  <div class="tense-grid">
+
+    <!-- Present Simple -->
+    <div class="tense-card">
+      <div class="card-head">
+        <h3>Present Simple</h3>
+        <div class="card-subtitle">Habits · Facts · Routines</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active" style="color:var(--teal)"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label">Past</span>
+          <span class="tl-label active" style="color:var(--teal)">NOW ●</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>Subject + base verb (he/she/it → verb+s)<br><em>She works · They play · He teaches</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>am / is / are + past participle<br><em>It is made · They are sold · He is taught</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills">
+        <span class="pill">habits</span><span class="pill">routines</span><span class="pill">facts</span><span class="pill">schedules</span><span class="pill">instructions</span>
+      </div>
+      <div class="timewords-box">
+        <div class="tw-label">🕐 Time words</div>
+        <p>always · usually · often · sometimes · rarely · never · every day · on Mondays · in general</p>
+      </div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">The chef cooks the meal every evening.</div>
+        <div class="ex act">Water boils at 100°C. (fact)</div>
+        <div class="ex pas">The meal is cooked by the chef.</div>
+        <div class="ex pas">English is spoken worldwide.</div>
+      </div>
+      <div class="tip-box">
+        <div class="icon">i</div>
+        <div>In passive, the agent (by + person) is often dropped when it's obvious or unimportant: <em>"The windows are cleaned every week."</em></div>
+      </div>
+      <div class="err-box">
+        <div class="icon">✕</div>
+        <div><strong>Common error:</strong> "She work here." → "She <u>works</u> here." Never use present simple for actions happening right now — use present continuous instead.</div>
+      </div>
+    </div>
+
+    <!-- Past Simple -->
+    <div class="tense-card">
+      <div class="card-head">
+        <h3>Past Simple</h3>
+        <div class="card-subtitle">Completed actions · Past states</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--teal)"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--teal)">Action ●</span>
+          <span class="tl-label">Now</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>Subject + verb2 (past form / irregular)<br><em>I worked · She went · They said</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>was / were + past participle<br><em>It was built · They were told</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills">
+        <span class="pill">completed actions</span><span class="pill">past states</span><span class="pill">sequences</span>
+      </div>
+      <div class="timewords-box">
+        <div class="tw-label">🕐 Time words</div>
+        <p>yesterday · last week · ago · in 2020 · on Monday · when · then · at 6 o'clock · after that</p>
+      </div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">The students completed the task yesterday.</div>
+        <div class="ex act">Shakespeare wrote many plays in the 16th century.</div>
+        <div class="ex pas">The task was completed on time.</div>
+        <div class="ex pas">Many plays were written by Shakespeare.</div>
+      </div>
+      <div class="tip-box">
+        <div class="icon">i</div>
+        <div>Irregular verbs: go→went, buy→bought, write→wrote, take→took. The 3rd form (e.g. <em>written</em>) is used for passive.</div>
+      </div>
+      <div class="err-box">
+        <div class="icon">✕</div>
+        <div><strong>Common error:</strong> "I <u>have seen</u> him yesterday." → Use past simple with specific past time: "I <u>saw</u> him yesterday."</div>
+      </div>
+    </div>
+
+    <!-- Future Simple -->
+    <div class="tense-card">
+      <div class="card-head">
+        <h3>Future Simple</h3>
+        <div class="card-subtitle">Predictions · Decisions · Promises</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active" style="color:var(--teal)"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label">Past</span>
+          <span class="tl-label">Now</span>
+          <span class="tl-label active" style="color:var(--teal)">Future ●</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>will + base verb (all subjects)<br><em>I will go · She will arrive · They will win</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>will be + past participle<br><em>It will be done · They will be told</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills">
+        <span class="pill">predictions</span><span class="pill">decisions</span><span class="pill">promises</span><span class="pill">offers</span>
+      </div>
+      <div class="timewords-box">
+        <div class="tw-label">🕐 Time words</div>
+        <p>tomorrow · next week/year · soon · later · in the future · one day · in 2030</p>
+      </div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">They will announce the winner tonight.</div>
+        <div class="ex act">I'll help you with that. (spontaneous offer)</div>
+        <div class="ex pas">The winner will be announced tonight.</div>
+        <div class="ex pas">Results will be published soon.</div>
+      </div>
+      <div class="tip-box">
+        <div class="icon">i</div>
+        <div><strong>Will vs Going to:</strong> "I will call you" = decided right now. "I'm going to call you" = already planned before this moment.</div>
+      </div>
+      <div class="err-box">
+        <div class="icon">✕</div>
+        <div><strong>Common error:</strong> "When she <u>will arrive</u>..." → Never use 'will' in time clauses: "When she <u>arrives</u>..."</div>
+      </div>
+    </div>
+
+  </div><!-- /tense-grid -->
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 2: CONTINUOUS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page t-purple" id="page-continuous">
+  <div class="section-header">
+    <div class="section-number">02</div>
+    <div class="section-info">
+      <h2>Continuous Tenses</h2>
+      <p>Present · Past · Future &nbsp;|&nbsp; Active &amp; Passive Voice</p>
+    </div>
+  </div>
+  <div class="intro-bar">
+    Continuous (progressive) tenses emphasise that an action is <strong>in progress</strong> at a specific moment. Always formed with: be + verb-ing. Stative verbs (know, want, love, believe, understand) are <em>not</em> used in continuous tenses.
+  </div>
+  <div class="tense-grid">
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Present Continuous</h3><div class="card-subtitle">Happening now · Temporary</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot"></div><div class="tl-line"></div>
+          <div class="tl-dot active" style="color:var(--purple)"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label">Past</span>
+          <span class="tl-label active" style="color:var(--purple)">▶ NOW</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>am / is / are + verb-ing<br><em>I am working · She is studying</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>am / is / are + being + past participle<br><em>It is being repaired · They are being tested</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">happening now</span><span class="pill">temporary</span><span class="pill">future plans</span><span class="pill">changing trends</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>now · at the moment · currently · right now · today · this week · still · Look! · Listen!</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">She is writing an important report right now.</div>
+        <div class="ex act">I'm meeting the director tomorrow. (arrangement)</div>
+        <div class="ex pas">A new bridge is being built near the city.</div>
+        <div class="ex pas">The road is being repaired this week.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(157,127,255,0.15);color:var(--purple)">i</div><div>Spelling: drop final -e (make→making), double consonant after short vowel (run→running), -ie → -ying (lie→lying).</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "I am knowing the answer." → Stative verb! Say: "I <u>know</u> the answer."</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Past Continuous</h3><div class="card-subtitle">Background · Interrupted action</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--purple)"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--purple)">▶ Ongoing</span>
+          <span class="tl-label">Now</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>was / were + verb-ing<br><em>I was sleeping · They were talking</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>was / were + being + past participle<br><em>The road was being repaired</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">interrupted action</span><span class="pill">background scene</span><span class="pill">parallel past</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>while · when · as · at 8 p.m. yesterday · this time last week · all morning · the whole evening</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">I was watching TV when the phone rang.</div>
+        <div class="ex act">While she was cooking, he was setting the table.</div>
+        <div class="ex pas">The museum was being renovated when we visited.</div>
+        <div class="ex pas">Meals were being served all evening.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(157,127,255,0.15);color:var(--purple)">i</div><div>Key pattern: <em>was/were -ing</em> (long background) + <em>past simple</em> (short interruption).</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "She was knowing the answer." → Stative verb! Say: "She <u>knew</u> the answer."</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Future Continuous</h3><div class="card-subtitle">Ongoing at a future moment</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot"></div><div class="tl-line"></div>
+          <div class="tl-dot"></div><div class="tl-line"></div>
+          <div class="tl-dot active" style="color:var(--purple)"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label">Now</span>
+          <span class="tl-label">Future pt</span>
+          <span class="tl-label active" style="color:var(--purple)">▶ Ongoing</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active only</span>will be + verb-ing<br><em>I will be working · She will be travelling</em></div>
+        <div class="no-passive">⚠ No passive form exists</div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">ongoing at future moment</span><span class="pill">polite enquiries</span><span class="pill">future routine</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>this time tomorrow · at 6 p.m. next Friday · next week at this time</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">This time tomorrow, I will be flying to London.</div>
+        <div class="ex act">Will you be using the car this evening? (polite)</div>
+        <div class="ex act">She will be teaching all day on Wednesday.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(157,127,255,0.15);color:var(--purple)">i</div><div>Use for polite questions about plans: "Will you be needing the report?" — less direct than "Will you need it?"</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>No passive:</strong> "It will be being built" is ungrammatical. Restructure the sentence entirely.</div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 3: PERFECT -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page t-blue" id="page-perfect">
+  <div class="section-header">
+    <div class="section-number">03</div>
+    <div class="section-info">
+      <h2>Perfect Tenses</h2>
+      <p>Present · Past · Future &nbsp;|&nbsp; Active &amp; Passive Voice</p>
+    </div>
+  </div>
+  <div class="intro-bar">
+    Perfect tenses connect two time points — they show how a past action relates to the present, or how one past action preceded another. Always formed with: have / had / will have + past participle.
+  </div>
+  <div class="tense-grid">
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Present Perfect</h3><div class="card-subtitle">Past action → present result</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--blue)"></div>
+          <div class="tl-line" style="background:var(--blue);opacity:0.4"></div>
+          <div class="tl-dot active" style="color:var(--blue)"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--blue)">✦ Action</span>
+          <span class="tl-label active" style="color:var(--blue)">Result NOW</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>has / have + past participle<br><em>I have finished · She has arrived</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>has / have + been + past participle<br><em>It has been completed · They have been invited</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">past→present link</span><span class="pill">life experience</span><span class="pill">recent news</span><span class="pill">unfinished time</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>already · yet · just · ever · never · recently · lately · since · for · today · this week · so far</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">I have lost my keys. (result: I can't get in)</div>
+        <div class="ex act">Have you ever been to Japan? (life experience)</div>
+        <div class="ex pas">The report has been sent to the director.</div>
+        <div class="ex pas">The project has been completed ahead of schedule.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(77,166,255,0.15);color:var(--blue)">i</div><div><strong>Already / Yet:</strong> "I've <u>already</u> eaten." (positive) vs "Have you eaten <u>yet</u>?" / "I haven't finished <u>yet</u>." (negative/question)</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "I <u>have seen</u> him yesterday." Never use present perfect with a specific past time. Say: "I <u>saw</u> him yesterday."</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Past Perfect</h3><div class="card-subtitle">Earlier of two past events</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--blue)"></div>
+          <div class="tl-line" style="background:var(--blue);opacity:0.4"></div>
+          <div class="tl-dot active" style="color:#88c4ff"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--blue)">✦ Earlier</span>
+          <span class="tl-label active" style="color:#88c4ff">Later past</span>
+          <span class="tl-label">Now</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>had + past participle (all subjects)<br><em>I had finished · She had left</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>had + been + past participle<br><em>It had been repaired · They had been warned</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">earlier past</span><span class="pill">reported speech</span><span class="pill">3rd conditional</span><span class="pill">narrative</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>before · after · when · by the time · already · just · never · once · until</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">When I arrived, she had already left.</div>
+        <div class="ex act">He said he had never seen anything like it.</div>
+        <div class="ex pas">By the time we got there, the decision had been made.</div>
+        <div class="ex pas">The letter had been sent the day before.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(77,166,255,0.15);color:var(--blue)">i</div><div>Only use past perfect when sequence would otherwise be unclear. It is the "past of the past." If 'before'/'after' already clarifies order, past simple for both is also acceptable.</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Tip:</strong> Don't overuse it. "She left before he arrived" is perfectly clear without past perfect.</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Future Perfect</h3><div class="card-subtitle">Completed before a future deadline</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot"></div><div class="tl-line"></div>
+          <div class="tl-dot active" style="color:var(--blue)"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active" style="color:#88c4ff"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label">Now</span>
+          <span class="tl-label active" style="color:var(--blue)">✦ Done by</span>
+          <span class="tl-label active" style="color:#88c4ff">Deadline</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>will have + past participle<br><em>I will have finished · She will have left</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>will have been + past participle<br><em>It will have been completed</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">completed before future</span><span class="pill">future deadline</span><span class="pill">formal/academic</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>by tomorrow · by next week · by the time + clause · before she leaves · by 2030</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">By Friday, they will have finished the report.</div>
+        <div class="ex act">I will have lived here for 10 years by next June.</div>
+        <div class="ex pas">The new school will have been built by 2026.</div>
+        <div class="ex pas">The work will have been completed by then.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(77,166,255,0.15);color:var(--blue)">i</div><div><strong>"By"</strong> is the key trigger word. "By the time + clause" or "by + time expression" almost always signals this tense.</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Note:</strong> Less common in spoken English. More typical in formal and academic writing and B2+ exam tasks.</div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 4: PERFECT CONTINUOUS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page t-amber" id="page-perf-cont">
+  <div class="section-header">
+    <div class="section-number">04</div>
+    <div class="section-info">
+      <h2>Perfect Continuous Tenses</h2>
+      <p>Present · Past · Future &nbsp;|&nbsp; ACTIVE ONLY — no passive forms</p>
+    </div>
+  </div>
+  <div class="intro-bar">
+    Perfect continuous tenses emphasise the <strong>duration</strong> of an ongoing activity up to a reference point. They combine the "perfect" idea (linking two time points) with the "continuous" idea (ongoing action).
+  </div>
+  <div class="warn-banner">
+    <span class="wi">⚠</span>
+    <span><strong>KEY EXAM POINT:</strong> No passive forms exist for any Perfect Continuous tense. Present Perfect Continuous, Past Perfect Continuous, and Future Perfect Continuous are ACTIVE ONLY.</span>
+  </div>
+  <div class="tense-grid">
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Present Perfect Continuous</h3><div class="card-subtitle">Duration from past until now</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--amber)"></div>
+          <div class="tl-line" style="background:var(--amber);opacity:0.4"></div>
+          <div class="tl-dot active" style="color:var(--amber)"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--amber)">■ Started</span>
+          <span class="tl-label active" style="color:var(--amber)">▶ Still NOW</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active only</span>has / have + been + verb-ing<br><em>I have been working · She has been studying</em></div>
+        <div class="no-passive">⚠ No passive form</div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">duration until now</span><span class="pill">recent activity</span><span class="pill">temporary ongoing</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>since (start point) · for (period) · all day · all week · lately · recently · how long</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">She has been studying for five hours. (still studying)</div>
+        <div class="ex act">I've been waiting since 9 o'clock!</div>
+        <div class="ex act">Your eyes are red — have you been crying?</div>
+        <div class="ex act">They have been living here for twenty years.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(255,183,64,0.15);color:var(--amber)">i</div><div><strong>Since vs For:</strong> "since Monday" (starting point) vs "for three days" (duration). Both mark how long the action has continued.</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "I have been knowing him." → Stative verb! Say: "I have <u>known</u> him for years." (present perfect simple)</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Past Perfect Continuous</h3><div class="card-subtitle">Duration before a past event</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--amber)"></div>
+          <div class="tl-line" style="background:var(--amber);opacity:0.4"></div>
+          <div class="tl-dot active" style="color:#ffd490"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--amber)">■ Started</span>
+          <span class="tl-label active" style="color:#ffd490">▶ Past point</span>
+          <span class="tl-label">Now</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active only</span>had + been + verb-ing<br><em>I had been waiting · She had been working</em></div>
+        <div class="no-passive">⚠ No passive form</div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">duration before past</span><span class="pill">cause of past situation</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>for · since · before · when · by the time · all day (up to past point)</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">She was exhausted because she had been working all night.</div>
+        <div class="ex act">They had been waiting for 2 hours when the bus finally arrived.</div>
+        <div class="ex act">He had been learning English for years before he moved abroad.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(255,183,64,0.15);color:var(--amber)">i</div><div>This tense answers <strong>"Why?"</strong> in the past. Result = past simple; cause/duration = past perfect continuous: "She was tired <em>because</em> she had been running."</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Note:</strong> Don't use for stative verbs. "She had known him for years" (NOT "had been knowing").</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head"><h3>Future Perfect Continuous</h3><div class="card-subtitle">Duration up to a future deadline</div></div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot"></div>
+          <div class="tl-line" style="background:var(--amber);opacity:0.4"></div>
+          <div class="tl-dot active" style="color:var(--amber)"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active" style="color:#ffd490"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label">Now</span>
+          <span class="tl-label active" style="color:var(--amber)">▶ Ongoing</span>
+          <span class="tl-label active" style="color:#ffd490">■ Future pt</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active only</span>will have been + verb-ing<br><em>I will have been working · She will have been studying</em></div>
+        <div class="no-passive">⚠ No passive form</div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">duration up to future</span><span class="pill">emphasis on length</span></div>
+      <div class="timewords-box"><div class="tw-label">🕐 Time words</div><p>by next month · by 2030 · by the time + clause · for (period)</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">By next June, she will have been teaching for 30 years.</div>
+        <div class="ex act">When he retires, he will have been working here for 40 years.</div>
+        <div class="ex act">By the time you arrive, I will have been cooking for 2 hours.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(255,183,64,0.15);color:var(--amber)">i</div><div>Use when both the future <strong>deadline</strong> AND the <strong>length</strong> of the activity need to be expressed. The least common of all 12 tenses.</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Note:</strong> Rarely used in informal speech. Future perfect simple is usually preferred in everyday conversation.</div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 5: CONDITIONALS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page t-coral" id="page-cond">
+  <div class="section-header">
+    <div class="section-number">05</div>
+    <div class="section-info">
+      <h2>Conditionals</h2>
+      <p>1st · 2nd · 3rd &nbsp;|&nbsp; Active &amp; Passive Voice</p>
+    </div>
+  </div>
+  <div class="intro-bar">
+    Conditionals express hypothetical situations and their consequences. Two clauses: the <strong>if-clause</strong> (condition) + the <strong>main clause</strong> (result). Clauses can swap order. The if-clause sets up the scenario; the main clause shows what follows.
+  </div>
+  <div class="tense-grid">
+
+    <div class="tense-card">
+      <div class="card-head">
+        <h3>First Conditional</h3>
+        <div class="card-subtitle">Real future possibility</div>
+      </div>
+      <div class="reality-badge" style="background:rgba(76,221,136,0.12);border:1px solid rgba(76,221,136,0.3);color:var(--green)">
+        ✓ Possible &amp; Likely
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--coral)"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active" style="color:#ffb0b0"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--coral)">If (now)</span>
+          <span class="tl-label active" style="color:#ffb0b0">→ Result</span>
+          <span class="tl-label">Future</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>If + present simple, will + base verb<br><em>If it rains, we will cancel the trip.</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>If + pres. simple, will be + past participle<br><em>If the form is received, it will be processed.</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">real possibility</span><span class="pill">warnings</span><span class="pill">promises</span><span class="pill">instructions</span></div>
+      <div class="timewords-box"><div class="tw-label">🔑 Key words</div><p>if · unless · when · as soon as · as long as · provided that · in case</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">If they hurry, they will catch the bus.</div>
+        <div class="ex act">Unless you study harder, you won't pass the exam.</div>
+        <div class="ex pas">If the application is submitted, it will be reviewed within 5 days.</div>
+        <div class="ex pas">If the law is passed, it will be enforced immediately.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(255,107,107,0.15);color:var(--coral)">i</div><div><strong>Unless</strong> = "if not": "Unless it rains" = "If it doesn't rain." The if-clause always uses present simple, even though the meaning is future.</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "If she <u>will arrive</u> early, we will start." → No 'will' in the if-clause! → "If she <u>arrives</u> early, we will start."</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head">
+        <h3>Second Conditional</h3>
+        <div class="card-subtitle">Unreal / imaginary present</div>
+      </div>
+      <div class="reality-badge" style="background:rgba(255,183,64,0.1);border:1px solid rgba(255,183,64,0.3);color:var(--amber)">
+        ✗ Unlikely / Imaginary
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--coral)"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active" style="color:#ffb0b0"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--coral)">Imaginary</span>
+          <span class="tl-label active" style="color:#ffb0b0">→ Unreal result</span>
+          <span class="tl-label"></span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>If + past simple, would + base verb<br><em>If I had more time, I would learn piano.</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>If + past simple, would be + past participle<br><em>If the law were changed, it would be accepted.</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">unreal present</span><span class="pill">unlikely scenario</span><span class="pill">advice</span><span class="pill">polite requests</span></div>
+      <div class="timewords-box"><div class="tw-label">🔑 Key words</div><p>if only · suppose · what if · imagine · were to</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">If I were rich, I would travel around the world.</div>
+        <div class="ex act">If I were you, I would apply for that job. (advice)</div>
+        <div class="ex pas">If the policy were reviewed, it would be changed immediately.</div>
+        <div class="ex pas">If the rule were revised, it would be applied consistently.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(255,107,107,0.15);color:var(--coral)">i</div><div>"If I <strong>were</strong> you" is a fixed advice expression — always use <em>were</em>, never <em>was</em>. The past simple doesn't mean past time — it signals distance from reality.</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "If I <u>would have</u> more money..." → Never 'would' in the if-clause! → "If I <u>had</u> more money, I would buy a car."</div></div>
+    </div>
+
+    <div class="tense-card">
+      <div class="card-head">
+        <h3>Third Conditional</h3>
+        <div class="card-subtitle">Unreal past / regrets</div>
+      </div>
+      <div class="reality-badge" style="background:rgba(255,85,85,0.1);border:1px solid rgba(255,85,85,0.3);color:var(--red)">
+        ✗✗ Impossible (past)
+      </div>
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-dot active" style="color:var(--coral)"></div>
+          <div class="tl-line" style="opacity:0.5"></div>
+          <div class="tl-dot active" style="color:#ffb0b0"></div>
+          <div class="tl-line"></div><div class="tl-dot"></div>
+        </div>
+        <div class="tl-labels">
+          <span class="tl-label active" style="color:var(--coral)">Unreal past</span>
+          <span class="tl-label active" style="color:#ffb0b0">Imagined result</span>
+          <span class="tl-label">Now</span>
+        </div>
+      </div>
+      <div class="formula-pair">
+        <div class="formula act"><span class="flabel">Active</span>If + past perfect, would have + past participle<br><em>If she had studied, she would have passed.</em></div>
+        <div class="formula pas"><span class="flabel">Passive</span>If + past perfect, would have been + past participle<br><em>If the check had been done, it would have been caught.</em></div>
+      </div>
+      <div class="section-label">Uses</div>
+      <div class="pills"><span class="pill">regrets</span><span class="pill">past criticism</span><span class="pill">impossible change</span><span class="pill">speculation</span></div>
+      <div class="timewords-box"><div class="tw-label">🔑 Key words</div><p>if only · had (done) · might have · could have · would have</p></div>
+      <div class="examples">
+        <div class="section-label">Examples</div>
+        <div class="ex act">If she had studied harder, she would have passed the exam.</div>
+        <div class="ex act">I wouldn't have been late if the traffic had been lighter.</div>
+        <div class="ex pas">If the safety check had been completed, the accident would have been avoided.</div>
+        <div class="ex pas">If the letter had been sent, it would have been received in time.</div>
+      </div>
+      <div class="tip-box"><div class="icon" style="background:rgba(255,107,107,0.15);color:var(--coral)">i</div><div><strong>Mixed conditional:</strong> 3rd if-clause + 2nd main clause = past condition, present result: "If I <em>had studied</em> medicine, I <em>would be</em> a doctor now."</div></div>
+      <div class="err-box"><div class="icon">✕</div><div><strong>Error:</strong> "If I <u>would have known</u>..." → Never 'would have' in the if-clause! → "If I <u>had known</u>, I would have helped."</div></div>
+    </div>
+
+  </div>
+
+  <!-- Quick comparison table -->
+  <div class="cmp-wrap" style="margin-top:20px">
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th><th>If-clause</th><th>Main clause</th><th>Reality</th><th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="type-cell" style="color:var(--coral)">1st</td>
+          <td style="font-family:var(--mono);font-size:11px">present simple</td>
+          <td style="font-family:var(--mono);font-size:11px">will + base verb</td>
+          <td style="color:var(--green)">Possible ✓</td>
+          <td style="font-style:italic;color:var(--muted);font-size:11px">"If it rains, I will stay home."</td>
+        </tr>
+        <tr>
+          <td class="type-cell" style="color:var(--coral)">2nd</td>
+          <td style="font-family:var(--mono);font-size:11px">past simple</td>
+          <td style="font-family:var(--mono);font-size:11px">would + base verb</td>
+          <td style="color:var(--amber)">Unlikely ✗</td>
+          <td style="font-style:italic;color:var(--muted);font-size:11px">"If I were rich, I would travel."</td>
+        </tr>
+        <tr>
+          <td class="type-cell" style="color:var(--coral)">3rd</td>
+          <td style="font-family:var(--mono);font-size:11px">past perfect</td>
+          <td style="font-family:var(--mono);font-size:11px">would have + p.p.</td>
+          <td style="color:var(--red)">Impossible ✗✗</td>
+          <td style="font-style:italic;color:var(--muted);font-size:11px">"If I had known, I would have helped."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="golden-rule">
+    <span class="star">⭐</span>
+    <div><strong>Golden rule for all conditionals:</strong> The word "will" or "would" NEVER goes inside the if-clause in standard conditionals. This applies to all three types without exception.</div>
+  </div>
+</div>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const pages = document.querySelectorAll('.page');
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabs.forEach(b => b.classList.remove('active'));
+    pages.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('page-' + btn.dataset.tab).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
